@@ -8,6 +8,8 @@ dotenv.config();
 app.use(cors());
 app.use(express.json());
 
+require('./db/connectDb')
+
 const apiRoutes = require('./routes/apiRoutes')
 
 app.use('/api', apiRoutes)
